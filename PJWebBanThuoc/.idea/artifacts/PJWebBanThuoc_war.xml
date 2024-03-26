@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="PJWebBanThuoc:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="PJWebBanThuoc-0.1.war">
+      <element id="artifact" artifact-name="PJWebBanThuoc:war exploded" />
+    </root>
+  </artifact>
+</component>
