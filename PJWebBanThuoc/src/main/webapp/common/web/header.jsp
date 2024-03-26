@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse " id="navbarCollapse" style="background-color: #2167dd;">
                     <div class="navbar-nav mx-auto">
                         <a href="homeController" class="nav-item nav-link text-primary">Home</a>
-                        <a href="SanPhamController" class="nav-item nav-link text-primary">Shop</a>
+                        <a href="sanPhamController" class="nav-item nav-link text-primary">Shop</a>
                         <a href="shop-detail.html" class="nav-item nav-link text-primary">Shop Detail</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle text-primary"
