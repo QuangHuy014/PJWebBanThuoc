@@ -10,9 +10,7 @@
 </head>
 <body>
 	<div class="container " style="padding-top: 100px;">
-
-		<div class=" row mt-5  ">
-
+		<div class=" row mt-5 ">
 			<!-- san pham ban chay 1 -->
 			<div class="col-lg-7 col-md-12 col-sm-12 col-12 "
 				style="height: 100%;">
