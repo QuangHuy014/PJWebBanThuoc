@@ -16,4 +16,5 @@ public class SanPhamController extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("/views/web/sanpham.jsp");
 		rd.forward(request, response);
 	}
+	
 }
