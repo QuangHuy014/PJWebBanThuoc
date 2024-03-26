@@ -9,15 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/homeController")
-public class homeController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+@WebServlet("/sanPhamController")
+public class SanPhamController extends HttpServlet {
+	private static final long serialVersionUID = 1L;       
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/views/web/trangchu.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/views/web/sanpham.jsp");
 		rd.forward(request, response);
 	}
-
-
-
 }
