@@ -18,7 +18,7 @@
 
         http://www.springframework.org/schema/context
 
-              http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd">
 
  <!--   <context:component-scan
       base-package="vn.webbanthuoc.controller" /> -->
@@ -36,7 +36,7 @@
       <property name="suffix" value=".jsp" /><!-- các file có đuôi .jsp -->
 
    </bean>
-   <mvc:resources mapping="/template/**" location="/template/"/>
+   <mvc:resources mapping="/template/**" location="/template/"/> 
    <!--/template/ la cai thu muc decoraters -->
    <!-- /template/** là tiền tố c url -->
    <!--Để sử dụng được cái c url thì chúng ta phải định nghĩa cái này    <mvc:resources mapping="/template/**" location="/template/"/>  -->
