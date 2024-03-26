@@ -1,4 +1,0 @@
-diff a/PJWebBanThuoc/target/classes/.gitignore b/PJWebBanThuoc/target/classes/.gitignore	(rejected hunks)
-@@ -1 +1,2 @@
- /vn/
-+/Controller/
