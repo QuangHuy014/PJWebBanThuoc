@@ -10,7 +10,9 @@
 </head>
 <body>
 	<div class="container " style="padding-top: 100px;">
-		<div class=" row mt-5 ">
+
+		<div class=" row mt-5  ">
+
 			<!-- san pham ban chay 1 -->
 			<div class="col-lg-7 col-md-12 col-sm-12 col-12 "
 				style="height: 100%;">
@@ -153,7 +155,7 @@
 									<li><img
 										src="<c:url value='/template/web/img/icon1.webp' />" alt="">
 										<p>Giảm sốc</p></li>
-
+									
 									</li>
 									<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
 										mát</li>
@@ -207,8 +209,7 @@
 							<div
 								class="text-white bg-danger px-3 py-1 rounded position-absolute"
 								style="top: 10px; left: 10px;">-46%</div>
-							<img src="<c:url value='template/web/img/anhthuoc3.webp' />"
-								alt="">
+<img src="<c:url value='template/web/img/anhthuoc3.webp' />" alt="">
 							<div class="card-body" ng-if="ttsp">
 								<div class="slider-product-one-content-item-text">
 									<li><img
@@ -240,7 +241,7 @@
 								alt="">
 							<div class="card-body">
 								<div class="slider-product-one-content-item-text">
-									<li><img src="<c:url value='/img/icon1.webp' />" alt="">
+<li><img src="<c:url value='/img/icon1.webp' />" alt="">
 										<p>Giảm sốc</p></li>
 									<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
 										mát</li>
@@ -598,8 +599,7 @@
 											alt="">
 										<div class="card-body">
 											<div class="slider-product-one-content-item-text">
-												<li><img
-													src="<c:url value='/template/web/img/icon1.webp' />" alt="">
+<li><img src="<c:url value='/template/web/img/icon1.webp' />" alt="">
 													<p>Giảm sốc</p></li>
 												<li>Nước súc miệng Listerine Cool Mint giúp hơi thở
 													thơm mát</li>
@@ -681,8 +681,7 @@
 										<div
 											class="text-white bg-danger px-3 py-1 rounded position-absolute"
 											style="top: 10px; left: 10px;">-45%</div>
-										<img src="<c:url value='/template/web/img/anhthuoc8.webp' />"
-											alt="">
+									<img src="<c:url value='/template/web/img/anhthuoc8.webp' />" alt="">
 										<div class="card-body">
 											<div class="slider-product-one-content-item-text">
 												<li><img
@@ -892,11 +891,10 @@
 									<div
 										class="text-white bg-danger px-3 py-1 rounded position-absolute"
 										style="top: 10px; left: 10px;">-49%</div>
-									<img src="<c:url value='/template/web/img/srm3.webp' />" alt="">
+<img src="<c:url value='/template/web/img/srm3.webp' />" alt="">
 									<div class="card-body">
 										<div class="slider-product-one-content-item-text">
-											<li><img
-												src="<c:url value='/template/web/img/icon1.webp' />" alt="">
+<li><img src="<c:url value='/template/web/img/icon1.webp' />" alt="">
 												<p>Giảm sốc</p></li>
 											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
 												mát</li>
@@ -917,11 +915,10 @@
 									<div
 										class="text-white bg-danger px-3 py-1 rounded position-absolute"
 										style="top: 10px; left: 10px;">-49%</div>
-									<img src="<c:url value='/template/web/img/srm4.webp' />" alt="">
+<img src="<c:url value='/template/web/img/srm4.webp' />" alt="">
 									<div class="card-body">
 										<div class="slider-product-one-content-item-text">
-											<li><img
-												src="<c:url value='/template/web/img/icon1.webp' />" alt="">
+<li><img src="<c:url value='/template/web/img/icon1.webp' />" alt="">
 												<p>Giảm sốc</p></li>
 											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
 												mát</li>
@@ -965,14 +962,11 @@
 									<div
 										class="text-white bg-danger px-3 py-1 rounded position-absolute"
 										style="top: 10px; left: 10px;">-49%</div>
-									<img src="<c:url value='template/web/img/sanpham1.webp' />"
-										alt="">
+								<img src="<c:url value='template/web/img/sanpham1.webp' />" alt="">
 									<div class="card-body">
 										<div class="slider-product-one-content-item-text">
-											<img src="<c:url value='template/web/img/icon1.webp' />"
-												alt="">
-											<p>Deal Sốc Online</p>
-											</li>
+											<img src="<c:url value='template/web/img/icon1.webp' />" alt="">
+												<p>Deal Sốc Online</p></li>
 											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
 												mát</li>
 											<li><span style="color: blue;">56.400<sup>đ</sup>/Hộp
@@ -992,14 +986,10 @@
 									<div
 										class="text-white bg-danger px-3 py-1 rounded position-absolute"
 										style="top: 10px; left: 10px;">-49%</div>
-									<img src="<c:url value='template/web/img/sanpham2.webp' />"
-										alt="">
-									<div class="card-body">
+			<img src="<c:url value='template/web/img/sanpham2.webp' />" alt="">									<div class="card-body">
 										<div class="slider-product-one-content-item-text">
-											<img src="<c:url value='template/web/img/icon1.webp' />"
-												alt="">">
-											<p>Deal Sốc Online</p>
-											</li>
+					<img src="<c:url value='template/web/img/icon1.webp' />" alt="">">
+												<p>Deal Sốc Online</p></li>
 											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
 												mát</li>
 											<li><span style="color: blue;">56.400<sup>đ</sup>/Hộp
@@ -1019,14 +1009,11 @@
 									<div
 										class="text-white bg-danger px-3 py-1 rounded position-absolute"
 										style="top: 10px; left: 10px;">-49%</div>
-									<img src="<c:url value='template/web/img/sanpham3.webp' />"
-										alt="">
+							<img src="<c:url value='template/web/img/sanpham3.webp' />" alt="">
 									<div class="card-body">
 										<div class="slider-product-one-content-item-text">
-											<img src="<c:url value='template/web/img/icon1.webp' />"
-												alt="">
-											<p>Deal Sốc Online</p>
-											</li>
+												<img src="<c:url value='template/web/img/icon1.webp' />" alt="">
+												<p>Deal Sốc Online</p></li>
 											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
 												mát</li>
 											<li><span style="color: blue;">56.400<sup>đ</sup>/Hộp
@@ -1046,8 +1033,7 @@
 									<div
 										class="text-white bg-danger px-3 py-1 rounded position-absolute"
 										style="top: 10px; left: 10px;">-49%</div>
-									<img src="<c:url value='template/web/img/sanpham4.webp' />"
-										alt="">
+										<img src="<c:url value='template/web/img/sanpham4.webp' />" alt="">
 									<div class="card-body">
 										<div class="slider-product-one-content-item-text">
 											<li><img
@@ -1223,4 +1209,4 @@
 	</div>
 
 </body>
-</html> 
+</html>
