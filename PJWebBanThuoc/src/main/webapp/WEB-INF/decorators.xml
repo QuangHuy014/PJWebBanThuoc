@@ -11,7 +11,7 @@
         <pattern>/admin*</pattern>
     </decorator>
     
-    <decorator name="web" page="trangchu.jsp">
+    <decorator name="trangchu" page="trangchu.jsp">
         <pattern>/*</pattern>
     </decorator>
     
