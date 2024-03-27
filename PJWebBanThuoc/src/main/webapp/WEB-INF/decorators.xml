@@ -11,15 +11,16 @@
         <pattern>/admin*</pattern>
     </decorator>
     
-    <decorator name="web" page="trangchu.jsp">
+ <decorator name="web" page="trangchu.jsp">
         <pattern>/*</pattern>
-    </decorator> 
+    </decorator>  
     
-    <decorator name="login" page="login.jsp">
-        <pattern>/dang-nhap</pattern>
+  <decorator name="login" page="tranglogin.jsp">
+        <pattern>/loginController</pattern>
     </decorator>
+     
     
-     <decorator name="web" page = "trangcheckout.jsp">
-       <pattern>/checkController</pattern>
-    </decorator> 
+    
+    
+     
 </decorators>

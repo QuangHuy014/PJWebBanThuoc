@@ -9,16 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class checkController
- */
-@WebServlet("/checkController")
-public class checkController extends HttpServlet {
+
+@WebServlet("/loginController")
+public class loginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
+       
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		RequestDispatcher rd = request.getRequestDispatcher("/views/web/trangcheckout.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("views/web/tranglogin.jsp");
 		rd.forward(request, response);
 	}	
 }
