@@ -1,7 +1,7 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="/common/taglib.jsp"%>
+ <%@include file="/common/taglib.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -146,8 +146,8 @@
 					<div class="product-card-wrapper">
 						<div class="card">
 							<div
-								class="text-white bg-danger px-3 py-1 rounded position-absolute"
-								style="top: 10px; left: 10px;">-49%</div>
+								class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+								style="top: 0px; left: 0px;">-20%</div>
 							<img src="<c:url value='/template/web/img/anhthuoc1.webp' />"
 								alt="">
 							<div class="card-body">
@@ -155,7 +155,7 @@
 									<li><img
 										src="<c:url value='/template/web/img/icon1.webp' />" alt="">
 										<p>Giảm sốc</p></li>
-									
+
 									</li>
 									<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
 										mát</li>
@@ -163,10 +163,9 @@
 									</span> <del>
 											99.000<sup>đ</sup>
 										</del></li>
-									<button type="submit"
-										class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-										style="display: block; margin: 0 auto;">Thêm vào giỏ
-										thuốc</button>
+									<button type="submit" class="btn btn-primary btn-dark"
+										style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+										vào giỏ thuốc</button>
 								</div>
 							</div>
 						</div>
@@ -177,8 +176,8 @@
 					<div class="product-card-wrapper">
 						<div class="card">
 							<div
-								class="text-white bg-danger px-3 py-1 rounded position-absolute"
-								style="top: 10px; left: 10px;">-30%</div>
+								class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+								style="top: 0px; left: 0px;">-20%</div>
 							<img src="<c:url value='/template/web/img/anhthuoc2.webp' />"
 								alt="">
 							<div class="card-body">
@@ -193,10 +192,9 @@
 											99.000<sup>đ</sup>
 										</del></li>
 
-									<button type="submit"
-										class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-										style="display: block; margin: 0 auto;">Thêm vào giỏ
-										thuốc</button>
+									<button type="submit" class="btn btn-primary btn-dark"
+										style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+										vào giỏ thuốc</button>
 								</div>
 							</div>
 
@@ -207,9 +205,10 @@
 					<div class="product-card-wrapper">
 						<div class="card">
 							<div
-								class="text-white bg-danger px-3 py-1 rounded position-absolute"
-								style="top: 10px; left: 10px;">-46%</div>
-<img src="<c:url value='template/web/img/anhthuoc3.webp' />" alt="">
+								class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+								style="top: 0px; left: 0px;">-20%</div>
+							<img src="<c:url value='template/web/img/anhthuoc3.webp' />"
+								alt="">
 							<div class="card-body" ng-if="ttsp">
 								<div class="slider-product-one-content-item-text">
 									<li><img
@@ -222,10 +221,9 @@
 											99.000<sup>đ</sup>
 										</del></li>
 
-									<button type="submit"
-										class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-										style="display: block; margin: 0 auto;">Thêm vào giỏ
-										thuốc</button>
+									<button type="submit" class="btn btn-primary btn-dark"
+										style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+										vào giỏ thuốc</button>
 								</div>
 							</div>
 						</div>
@@ -235,13 +233,14 @@
 					<div class="product-card-wrapper">
 						<div class="card">
 							<div
-								class="text-white bg-danger px-3 py-1 rounded position-absolute"
-								style="top: 10px; left: 10px;">-30%</div>
+								class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+								style="top: 0px; left: 0px;">-20%</div>
 							<img src="<c:url value='/template/web/img/anhthuoc4.webp' />"
 								alt="">
 							<div class="card-body">
 								<div class="slider-product-one-content-item-text">
-<li><img src="<c:url value='/img/icon1.webp' />" alt="">
+									<li><img
+										src="<c:url value='/template/web/img/icon1.webp' />" alt="">
 										<p>Giảm sốc</p></li>
 									<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
 										mát</li>
@@ -250,10 +249,9 @@
 											99.000<sup>đ</sup>
 										</del></li>
 
-									<button type="submit"
-										class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-										style="display: block; margin: 0 auto;">Thêm vào giỏ
-										thuốc</button>
+									<button type="submit" class="btn btn-primary btn-dark"
+										style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+										vào giỏ thuốc</button>
 								</div>
 							</div>
 
@@ -593,13 +591,14 @@
 								<div class="product-card-wrapper">
 									<div class="card">
 										<div
-											class="text-white bg-danger px-3 py-1 rounded position-absolute"
-											style="top: 10px; left: 10px;">-50%</div>
+											class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+											style="top: 0px; left: 0px;">-20%</div>
 										<img src="<c:url value='/template/web/img/anhthuoc5.webp' />"
 											alt="">
 										<div class="card-body">
 											<div class="slider-product-one-content-item-text">
-<li><img src="<c:url value='/template/web/img/icon1.webp' />" alt="">
+												<li><img
+													src="<c:url value='/template/web/img/icon1.webp' />" alt="">
 													<p>Giảm sốc</p></li>
 												<li>Nước súc miệng Listerine Cool Mint giúp hơi thở
 													thơm mát</li>
@@ -608,10 +607,9 @@
 														99.000<sup>đ</sup>
 													</del></li>
 
-												<button type="submit"
-													class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-													style="display: block; margin: 0 auto;">Thêm vào
-													giỏ thuốc</button>
+												<button type="submit" class="btn btn-primary btn-dark"
+													style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+													vào giỏ thuốc</button>
 											</div>
 										</div>
 									</div>
@@ -621,8 +619,8 @@
 								<div class="product-card-wrapper">
 									<div class="card">
 										<div
-											class="text-white bg-danger px-3 py-1 rounded position-absolute"
-											style="top: 10px; left: 10px;">-5%</div>
+											class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+											style="top: 0px; left: 0px;">-20%</div>
 										<img src="<c:url value='/template/web/img/anhthuoc6.webp' />"
 											alt="">
 										<div class="card-body">
@@ -637,10 +635,9 @@
 														99.000<sup>đ</sup>
 													</del></li>
 
-												<button type="submit"
-													class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-													style="display: block; margin: 0 auto;">Thêm vào
-													giỏ thuốc</button>
+												<button type="submit" class="btn btn-primary btn-dark"
+													style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+													vào giỏ thuốc</button>
 											</div>
 										</div>
 									</div>
@@ -650,8 +647,8 @@
 								<div class="product-card-wrapper">
 									<div class="card">
 										<div
-											class="text-white bg-danger px-3 py-1 rounded position-absolute"
-											style="top: 10px; left: 10px;">-45%</div>
+											class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+											style="top: 0px; left: 0px;">-20%</div>
 										<img src="<c:url value='/template/web/img/anhthuoc7.webp' />"
 											alt="">
 										<div class="card-body">
@@ -666,10 +663,9 @@
 														99.000<sup>đ</sup>
 													</del></li>
 
-												<button type="submit"
-													class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-													style="display: block; margin: 0 auto;">Thêm vào
-													giỏ thuốc</button>
+												<button type="submit" class="btn btn-primary btn-dark"
+													style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+													vào giỏ thuốc</button>
 											</div>
 										</div>
 									</div>
@@ -679,9 +675,10 @@
 								<div class="product-card-wrapper">
 									<div class="card">
 										<div
-											class="text-white bg-danger px-3 py-1 rounded position-absolute"
-											style="top: 10px; left: 10px;">-45%</div>
-									<img src="<c:url value='/template/web/img/anhthuoc8.webp' />" alt="">
+											class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+											style="top: 0px; left: 0px;">-20%</div>
+										<img src="<c:url value='/template/web/img/anhthuoc8.webp' />"
+											alt="">
 										<div class="card-body">
 											<div class="slider-product-one-content-item-text">
 												<li><img
@@ -694,10 +691,9 @@
 														99.000<sup>đ</sup>
 													</del></li>
 
-												<button type="submit"
-													class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-													style="display: block; margin: 0 auto;">Thêm vào
-													giỏ thuốc</button>
+												<button type="submit" class="btn btn-primary btn-dark"
+													style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+													vào giỏ thuốc</button>
 											</div>
 										</div>
 									</div>
@@ -724,8 +720,8 @@
 							<div class="col-md-3 py-3 py-md-0">
 								<div class="card">
 									<div
-										class="text-white bg-danger px-3 py-1 rounded position-absolute"
-										style="top: 10px; left: 10px;">-49%</div>
+										class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+										style="top: 0px; left: 0px;">-20%</div>
 									<img src="<c:url value='/template/web/img/nuoc.webp' />" alt="">
 									<div class="card-body">
 										<div class="slider-product-one-content-item-text1">
@@ -735,10 +731,9 @@
 											</span> <del>
 													99.000<sup>đ</sup>
 												</del></li>
-											<button type="submit"
-												class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-												style="display: block; margin: 0 auto;">Thêm vào
-												giỏ thuốc</button>
+											<button type="submit" class="btn btn-primary btn-dark"
+												style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+												vào giỏ thuốc</button>
 										</div>
 									</div>
 								</div>
@@ -746,8 +741,8 @@
 							<div class="col-md-3 py-3 py-md-0">
 								<div class="card">
 									<div
-										class="text-white bg-danger px-3 py-1 rounded position-absolute"
-										style="top: 10px; left: 10px;">-49%</div>
+										class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+										style="top: 0px; left: 0px;">-20%</div>
 									<img src="<c:url value='/template/web/img/nuoc1.webp' />"
 										alt="">
 									<div class="card-body">
@@ -758,10 +753,9 @@
 											</span> <del>
 													99.000<sup>đ</sup>
 												</del></li>
-											<button type="submit"
-												class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-												style="display: block; margin: 0 auto;">Thêm vào
-												giỏ thuốc</button>
+											<button type="submit" class="btn btn-primary btn-dark"
+												style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+												vào giỏ thuốc</button>
 										</div>
 									</div>
 								</div>
@@ -769,8 +763,8 @@
 							<div class="col-md-3 py-3 py-md-0">
 								<div class="card">
 									<div
-										class="text-white bg-danger px-3 py-1 rounded position-absolute"
-										style="top: 10px; left: 10px;">-49%</div>
+										class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+										style="top: 0px; left: 0px;">-20%</div>
 									<img src="<c:url value='/template/web/img/nuoc2.webp' />"
 										alt="">
 									<div class="card-body">
@@ -781,10 +775,9 @@
 											</span> <del>
 													99.000<sup>đ</sup>
 												</del></li>
-											<button type="submit"
-												class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-												style="display: block; margin: 0 auto;">Thêm vào
-												giỏ thuốc</button>
+											<button type="submit" class="btn btn-primary btn-dark"
+												style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+												vào giỏ thuốc</button>
 										</div>
 									</div>
 								</div>
@@ -792,8 +785,8 @@
 							<div class="col-md-3 py-3 py-md-0">
 								<div class="card">
 									<div
-										class="text-white bg-danger px-3 py-1 rounded position-absolute"
-										style="top: 10px; left: 10px;">-49%</div>
+										class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+										style="top: 0px; left: 0px;">-20%</div>
 									<img src="<c:url value='/template/web/img/nuoc3.webp' />"
 										alt="">
 									<div class="card-body">
@@ -804,10 +797,9 @@
 											</span> <del>
 													99.000<sup>đ</sup>
 												</del></li>
-											<button type="submit"
-												class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-												style="display: block; margin: 0 auto;">Thêm vào
-												giỏ thuốc</button>
+											<button type="submit" class="btn btn-primary btn-dark"
+												style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+												vào giỏ thuốc</button>
 										</div>
 									</div>
 								</div>
@@ -815,8 +807,10 @@
 						</div>
 					</div>
 
-					<button class="btn btn-outline-primary d-block mx-auto px-4 my-2"
-						type="button">Xem tất cả Hỗ trợ sinh lý ></button>
+					 <button class="btn btn-primary btn-dark d-block mx-auto px-4 my-2" type="button"
+                        style="display: block; margin: 0 auto; background-color: #3153DC;">
+                        Xem tất cả Hỗ trợ sinh lý >
+                    </button>
 
 
 
@@ -838,8 +832,8 @@
 							<div class="col-md-3 py-3 py-md-0">
 								<div class="card">
 									<div
-										class="text-white bg-danger px-3 py-1 rounded position-absolute"
-										style="top: 10px; left: 10px;">-49%</div>
+										class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+										style="top: 0px; left: 0px;">-20%</div>
 									<img src="<c:url value='/template/web/img/srm1.webp' />" alt="">
 									<div class="card-body">
 										<div class="slider-product-one-content-item-text">
@@ -852,10 +846,9 @@
 											</span> <del>
 													99.000<sup>đ</sup>
 												</del></li>
-											<button type="submit"
-												class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-												style="display: block; margin: 0 auto;">Thêm vào
-												giỏ thuốc</button>
+											<button type="submit" class="btn btn-primary btn-dark"
+												style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+												vào giỏ thuốc</button>
 										</div>
 									</div>
 								</div>
@@ -863,8 +856,8 @@
 							<div class="col-md-3 py-3 py-md-0">
 								<div class="card">
 									<div
-										class="text-white bg-danger px-3 py-1 rounded position-absolute"
-										style="top: 10px; left: 10px;">-49%</div>
+										class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+										style="top: 0px; left: 0px;">-20%</div>
 									<img src="<c:url value='/template/web/img/anhthuoc2.webp' />"
 										alt="">
 									<div class="card-body">
@@ -878,10 +871,9 @@
 											</span> <del>
 													99.000<sup>đ</sup>
 												</del></li>
-											<button type="submit"
-												class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-												style="display: block; margin: 0 auto;">Thêm vào
-												giỏ thuốc</button>
+											<button type="submit" class="btn btn-primary btn-dark"
+												style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+												vào giỏ thuốc</button>
 										</div>
 									</div>
 								</div>
@@ -889,12 +881,13 @@
 							<div class="col-md-3 py-3 py-md-0">
 								<div class="card">
 									<div
-										class="text-white bg-danger px-3 py-1 rounded position-absolute"
-										style="top: 10px; left: 10px;">-49%</div>
-<img src="<c:url value='/template/web/img/srm3.webp' />" alt="">
+										class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+										style="top: 0px; left: 0px;">-20%</div>
+									<img src="<c:url value='/template/web/img/srm3.webp' />" alt="">
 									<div class="card-body">
 										<div class="slider-product-one-content-item-text">
-<li><img src="<c:url value='/template/web/img/icon1.webp' />" alt="">
+											<li><img
+												src="<c:url value='/template/web/img/icon1.webp' />" alt="">
 												<p>Giảm sốc</p></li>
 											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
 												mát</li>
@@ -902,10 +895,9 @@
 											</span> <del>
 													99.000<sup>đ</sup>
 												</del></li>
-											<button type="submit"
-												class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-												style="display: block; margin: 0 auto;">Thêm vào
-												giỏ thuốc</button>
+											<button type="submit" class="btn btn-primary btn-dark"
+												style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+												vào giỏ thuốc</button>
 										</div>
 									</div>
 								</div>
@@ -913,12 +905,13 @@
 							<div class="col-md-3 py-3 py-md-0">
 								<div class="card">
 									<div
-										class="text-white bg-danger px-3 py-1 rounded position-absolute"
-										style="top: 10px; left: 10px;">-49%</div>
-<img src="<c:url value='/template/web/img/srm4.webp' />" alt="">
+										class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+										style="top: 0px; left: 0px;">-20%</div>
+									<img src="<c:url value='/template/web/img/srm4.webp' />" alt="">
 									<div class="card-body">
 										<div class="slider-product-one-content-item-text">
-<li><img src="<c:url value='/template/web/img/icon1.webp' />" alt="">
+											<li><img
+												src="<c:url value='/template/web/img/icon1.webp' />" alt="">
 												<p>Giảm sốc</p></li>
 											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
 												mát</li>
@@ -926,10 +919,9 @@
 											</span> <del>
 													99.000<sup>đ</sup>
 												</del></li>
-											<button type="submit"
-												class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-												style="display: block; margin: 0 auto;">Thêm vào
-												giỏ thuốc</button>
+											<button type="submit" class="btn btn-primary btn-dark"
+												style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+												vào giỏ thuốc</button>
 										</div>
 									</div>
 								</div>
@@ -939,8 +931,10 @@
 
 
 					<!----------------------------------------------------->
-					<button class="btn btn-outline-primary d-block mx-auto px-4 my-2"
-						type="button">Xem tất cả Dược Mỹ Phẩm ></button>
+					 <button class="btn btn-primary btn-dark d-block mx-auto px-4 my-2" type="button"
+                        style="display: block; margin: 0 auto; background-color: #3153DC;">
+                        Xem tất cả Hỗ trợ sinh lý >
+                    </button>
 
 					<!----------------------sản phẩm khác---------------------------------------->
 					<div class="container mt-5" id="product-cards">
@@ -960,80 +954,10 @@
 							<div class="col-md-3 py-3 py-md-0">
 								<div class="card">
 									<div
-										class="text-white bg-danger px-3 py-1 rounded position-absolute"
-										style="top: 10px; left: 10px;">-49%</div>
-								<img src="<c:url value='template/web/img/sanpham1.webp' />" alt="">
-									<div class="card-body">
-										<div class="slider-product-one-content-item-text">
-											<img src="<c:url value='template/web/img/icon1.webp' />" alt="">
-												<p>Deal Sốc Online</p></li>
-											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
-												mát</li>
-											<li><span style="color: blue;">56.400<sup>đ</sup>/Hộp
-											</span> <del>
-													99.000<sup>đ</sup>
-												</del></li>
-											<button type="submit"
-												class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-												style="display: block; margin: 0 auto;">Thêm vào
-												giỏ thuốc</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 py-3 py-md-0">
-								<div class="card">
-									<div
-										class="text-white bg-danger px-3 py-1 rounded position-absolute"
-										style="top: 10px; left: 10px;">-49%</div>
-			<img src="<c:url value='template/web/img/sanpham2.webp' />" alt="">									<div class="card-body">
-										<div class="slider-product-one-content-item-text">
-					<img src="<c:url value='template/web/img/icon1.webp' />" alt="">">
-												<p>Deal Sốc Online</p></li>
-											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
-												mát</li>
-											<li><span style="color: blue;">56.400<sup>đ</sup>/Hộp
-											</span> <del>
-													99.000<sup>đ</sup>
-												</del></li>
-											<button type="submit"
-												class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-												style="display: block; margin: 0 auto;">Thêm vào
-												giỏ thuốc</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 py-3 py-md-0">
-								<div class="card">
-									<div
-										class="text-white bg-danger px-3 py-1 rounded position-absolute"
-										style="top: 10px; left: 10px;">-49%</div>
-							<img src="<c:url value='template/web/img/sanpham3.webp' />" alt="">
-									<div class="card-body">
-										<div class="slider-product-one-content-item-text">
-												<img src="<c:url value='template/web/img/icon1.webp' />" alt="">
-												<p>Deal Sốc Online</p></li>
-											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
-												mát</li>
-											<li><span style="color: blue;">56.400<sup>đ</sup>/Hộp
-											</span> <del>
-													99.000<sup>đ</sup>
-												</del></li>
-											<button type="submit"
-												class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-												style="display: block; margin: 0 auto;">Thêm vào
-												giỏ thuốc</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 py-3 py-md-0">
-								<div class="card">
-									<div
-										class="text-white bg-danger px-3 py-1 rounded position-absolute"
-										style="top: 10px; left: 10px;">-49%</div>
-										<img src="<c:url value='template/web/img/sanpham4.webp' />" alt="">
+										class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+										style="top: 0px; left: 0px;">-20%</div>
+									<img src="<c:url value='template/web/img/sanpham1.webp' />"
+										alt="">
 									<div class="card-body">
 										<div class="slider-product-one-content-item-text">
 											<li><img
@@ -1045,10 +969,84 @@
 											</span> <del>
 													99.000<sup>đ</sup>
 												</del></li>
-											<button type="submit"
-												class="btn btn-primary border-0 border-secondary py-2 px-2 rounded text-white"
-												style="display: block; margin: 0 auto;">Thêm vào
-												giỏ thuốc</button>
+											<button type="submit" class="btn btn-primary btn-dark"
+												style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+												vào giỏ thuốc</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 py-3 py-md-0">
+								<div class="card">
+									<div
+										class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+										style="top: 0px; left: 0px;">-20%</div>
+									<img src="<c:url value='template/web/img/sanpham2.webp' />"
+										alt="">
+									<div class="card-body">
+										<div class="slider-product-one-content-item-text">
+											<li><img
+												src="<c:url value='/template/web/img/icon1.webp' />" alt="">
+												<p>Deal Sốc Online</p></li>
+											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
+												mát</li>
+											<li><span style="color: blue;">56.400<sup>đ</sup>/Hộp
+											</span> <del>
+													99.000<sup>đ</sup>
+												</del></li>
+											<button type="submit" class="btn btn-primary btn-dark"
+												style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+												vào giỏ thuốc</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 py-3 py-md-0">
+								<div class="card">
+									<div
+										class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+										style="top: 0px; left: 0px;">-20%</div>
+									<img src="<c:url value='template/web/img/sanpham3.webp' />"
+										alt="">
+									<div class="card-body">
+										<div class="slider-product-one-content-item-text">
+											<li><img
+												src="<c:url value='/template/web/img/icon1.webp' />" alt="">
+												<p>Deal Sốc Online</p></li>
+											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
+												mát</li>
+											<li><span style="color: blue;">56.400<sup>đ</sup>/Hộp
+											</span> <del>
+													99.000<sup>đ</sup>
+												</del></li>
+											<button type="submit" class="btn btn-primary btn-dark"
+												style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+												vào giỏ thuốc</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 py-3 py-md-0">
+								<div class="card">
+									<div
+										class="text-white bg-danger px-3 py-1 rounded-end position-absolute"
+										style="top: 0px; left: 0px;">-20%</div>
+									<img src="<c:url value='template/web/img/sanpham4.webp' />"
+										alt="">
+									<div class="card-body">
+										<div class="slider-product-one-content-item-text">
+											<li><img
+												src="<c:url value='/template/web/img/icon1.webp' />" alt="">
+												<p>Deal Sốc Online</p></li>
+											<li>Nước súc miệng Listerine Cool Mint giúp hơi thở thơm
+												mát</li>
+											<li><span style="color: blue;">56.400<sup>đ</sup>/Hộp
+											</span> <del>
+													99.000<sup>đ</sup>
+												</del></li>
+											<button type="submit" class="btn btn-primary btn-dark"
+												style="display: block; margin: 0 auto; background-color: #3153DC;">Thêm
+												vào giỏ thuốc</button>
 										</div>
 									</div>
 								</div>
@@ -1056,8 +1054,10 @@
 						</div>
 					</div>
 					<!--------------------------------sản phẩm khác----------------------------------------------->
-					<button class="btn btn-outline-primary d-block mx-auto px-4 my-2"
-						type="button">Xem tất cả Sản Phẩm Khác ></button>
+					 <button class="btn btn-primary btn-dark d-block mx-auto px-4 my-2" type="button"
+                        style="display: block; margin: 0 auto; background-color: #3153DC;">
+                        Xem tất cả Hỗ trợ sinh lý >
+                    </button>
 
 					<div class="container">
 						<div class="bg-light px-2 rounded mt-3">

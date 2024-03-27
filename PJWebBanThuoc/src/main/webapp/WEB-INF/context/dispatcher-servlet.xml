@@ -36,7 +36,10 @@
       <property name="suffix" value=".jsp" /><!-- các file có đuôi .jsp -->
 
    </bean>
-   <mvc:resources mapping="/template/**" location="/template/"/>
+  <mvc:resources mapping="/template/**" location="/template/"/> 
+  <mvc:resources mapping="/check-out/**" location="/template/check-out/"/> 
+ 
+   
    <!--/template/ la cai thu muc decoraters -->
    <!-- /template/** là tiền tố c url -->
    <!--Để sử dụng được cái c url thì chúng ta phải định nghĩa cái này    <mvc:resources mapping="/template/**" location="/template/"/>  -->

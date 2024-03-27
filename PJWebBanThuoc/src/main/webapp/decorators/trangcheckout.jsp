@@ -1,6 +1,6 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-  <%@include file="/common/taglib.jsp" %> 
+<%@include file="/common/taglib.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,19 +32,7 @@
 <link href="<c:url value='/template/web/css/style.css'/>" rel="stylesheet">
 <link href="<c:url value='/template/web/css/style1.css'/>" rel="stylesheet">
 
-    <style>
-        .multi-line {
-            max-height: 3em;
-            /* Độ cao tối đa là 3 dòng (tùy chỉnh theo nhu cầu) */
-            overflow: hidden;
-            text-overflow: ellipsis;
-            /* Hiển thị dấu chấm (...) khi văn bản bị cắt */
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            /* Số dòng tối đa */
-            -webkit-box-orient: vertical;
-        }
-    </style>
+   
 </head>
 <body>
 <%@ include file ="/common/web/header.jsp"%>
