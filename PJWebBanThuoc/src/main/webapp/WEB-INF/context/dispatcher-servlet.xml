@@ -37,7 +37,7 @@
 
    </bean>
   <mvc:resources mapping="/template/**" location="/template/"/> 
-  <mvc:resources mapping="/check-out/**" location="/template/check-out/"/> 
+
  
    
    <!--/template/ la cai thu muc decoraters -->

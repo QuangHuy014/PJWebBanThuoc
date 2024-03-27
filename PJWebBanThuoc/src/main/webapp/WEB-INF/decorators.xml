@@ -20,6 +20,6 @@
     </decorator>
     
      <decorator name="web" page = "trangcheckout.jsp">
-       <pattern>/checkout</pattern>
+       <pattern>/checkController</pattern>
     </decorator> 
 </decorators>

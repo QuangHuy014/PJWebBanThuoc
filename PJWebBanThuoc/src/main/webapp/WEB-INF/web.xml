@@ -10,15 +10,7 @@
 		<display-name>homeController</display-name>
 		<servlet-name>homeController</servlet-name>
 		<servlet-class>vn.webbanthuoc.controller.web</servlet-class>
-	</servlet>
-	
-	<servlet>
-		<description></description>
-		<display-name>checkoutController</display-name>
-		<servlet-name>checkoutController</servlet-name>
-		<servlet-class>vn.webbanthuoc.controller.web</servlet-class>
-	</servlet>
-	
+	</servlet>	
 	<!-- sitemesh filter -->
 	<filter>
 		<filter-name>sitemesh</filter-name>
@@ -35,11 +27,6 @@
 	<servlet-mapping>
 		<servlet-name>homeController</servlet-name>
 	 <url-pattern>/HomeController</url-pattern> 
-	</servlet-mapping>
-	
-	<servlet-mapping>
-		<servlet-name>checkoutController</servlet-name>
-		<url-pattern>/checkout</url-pattern>
 	</servlet-mapping>
 	
 	<display-name>PJWebBanThuoc</display-name>
