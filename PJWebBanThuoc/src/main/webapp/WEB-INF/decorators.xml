@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <decorators defaultdir="/decorators">
     <!-- Any urls that are excluded will never be decorated by Sitemesh -->
@@ -11,11 +12,18 @@
         <pattern>/admin*</pattern>
     </decorator>
     
-    <decorator name="trangchu" page="trangchu.jsp">
-        <pattern>/*</pattern>
+    <decorator name="web" page="trangchu.jsp">
+        <pattern>/homeController</pattern>
     </decorator>
     
     <decorator name="login" page="login.jsp">
         <pattern>/dang-nhap</pattern>
     </decorator>
+ <decorator name="productDetail" page="productDetail.jsp">
+        <pattern>/product-Detail</pattern>
+    </decorator>
+     <decorator name="cart" page="cart.jsp">
+        <pattern>/cart</pattern>
+    </decorator>
+
 </decorators>

@@ -1,16 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="/common/taglib.jsp" %>
+    <%@include file="/common/taglib.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Fruitables - Vegetable Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Google Web Fonts -->
+<meta charset="UTF-8">
+<title>Insert title here</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -31,20 +26,6 @@
 <!-- Template Stylesheet -->
 <link href="<c:url value='/template/web/css/style.css'/>" rel="stylesheet">
 <link href="<c:url value='/template/web/css/style1.css'/>" rel="stylesheet">
-
-    <style>
-        .multi-line {
-            max-height: 3em;
-            /* Độ cao tối đa là 3 dòng (tùy chỉnh theo nhu cầu) */
-            overflow: hidden;
-            text-overflow: ellipsis;
-            /* Hiển thị dấu chấm (...) khi văn bản bị cắt */
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            /* Số dòng tối đa */
-            -webkit-box-orient: vertical;
-        }
-    </style>
 </head>
 <body>
 <%@ include file ="/common/web/header.jsp"%>
@@ -61,6 +42,4 @@
 
 <!-- Template Javascript -->
 <script src="<c:url value='/template/web/js/main.js'/>"></script>
- 
-
 </html>
