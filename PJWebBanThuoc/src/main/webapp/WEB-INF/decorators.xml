@@ -18,11 +18,15 @@
     <decorator name="login" page="login.jsp">
         <pattern>/dang-nhap</pattern>
     </decorator>
- <decorator name="productDetail" page="productDetail.jsp">
+    <decorator name="productDetail" page="productDetail.jsp">
         <pattern>/product-Detail</pattern>
     </decorator>
-     <decorator name="cart" page="cart.jsp">
+    <decorator name="cart" page="cart.jsp">
         <pattern>/cart</pattern>
     </decorator>
+      <decorator name="sanpham" page="sanpham.jsp">
+        <pattern>/sanPhamController</pattern>
+    </decorator>
+    
 
 </decorators>
