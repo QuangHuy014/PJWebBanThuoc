@@ -11,12 +11,16 @@
         <pattern>/admin*</pattern>
     </decorator>
     
+
+ 
+
     <decorator name="web" page="trangchu.jsp">
         <pattern>/homeController</pattern>
     </decorator>
+
     
-    <decorator name="login" page="login.jsp">
-        <pattern>/dang-nhap</pattern>
+  <decorator name="login" page="tranglogin.jsp">
+        <pattern>/loginController</pattern>
     </decorator>
     <decorator name="productDetail" page="productDetail.jsp">
         <pattern>/product-Detail</pattern>
@@ -24,9 +28,13 @@
     <decorator name="cart" page="cart.jsp">
         <pattern>/cart</pattern>
     </decorator>
-      <decorator name="sanpham" page="sanpham.jsp">
+
+     <decorator name="sanPham" page="sanpham.jsp">
         <pattern>/sanPhamController</pattern>
-    </decorator>
-    
+    </decorator> 
+    <decorator name="checkOut" page="trangcheckout.jsp">
+        <pattern>/checkController</pattern>
+    </decorator> 
+
 
 </decorators>

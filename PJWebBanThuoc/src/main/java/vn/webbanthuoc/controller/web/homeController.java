@@ -24,7 +24,7 @@ public class homeController extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
+	/** 
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -52,7 +52,7 @@ public class homeController extends HttpServlet {
 				throw new IllegalArgumentException("Unexpected value: " + action);
 			}
 		} catch (Exception e) {
-	
+			// TODO: handle exception
 		}
 	}
 
@@ -64,3 +64,4 @@ public class homeController extends HttpServlet {
 	}
 
 }
+
