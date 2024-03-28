@@ -52,7 +52,7 @@ public class homeController extends HttpServlet {
 				throw new IllegalArgumentException("Unexpected value: " + action);
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+	
 		}
 	}
 
