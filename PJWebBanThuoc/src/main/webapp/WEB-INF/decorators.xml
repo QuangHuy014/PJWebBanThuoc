@@ -11,26 +11,20 @@
         <pattern>/admin*</pattern>
     </decorator>
     
-<<<<<<< HEAD
- <decorator name="web" page="trangchu.jsp">
+
+ <!-- <decorator name="web" page="trangchu.jsp">
         <pattern>/*</pattern>
-    </decorator>  
-=======
+    </decorator>  --> 
+
     <decorator name="web" page="trangchu.jsp">
         <pattern>/homeController</pattern>
     </decorator>
->>>>>>> main
+
     
   <decorator name="login" page="tranglogin.jsp">
         <pattern>/loginController</pattern>
     </decorator>
-<<<<<<< HEAD
-     
-    
-    
-    
-     
-=======
+
  <decorator name="productDetail" page="productDetail.jsp">
         <pattern>/product-Detail</pattern>
     </decorator>
@@ -40,6 +34,9 @@
      <decorator name="sanPham" page="sanpham.jsp">
         <pattern>/sanPhamController</pattern>
     </decorator> 
+    <decorator name="checkOut" page="trangcheckout.jsp">
+        <pattern>/checkController</pattern>
+    </decorator> 
 
->>>>>>> main
+
 </decorators>
