@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="/common/taglib.jsp" %>
+  <%@include file="/common/taglib.jsp" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,4 +63,8 @@
 <script src="<c:url value='/template/web/js/main.js'/>"></script>
  
 
+<<<<<<< HEAD
+</html> 
+=======
 </html>
+>>>>>>> main
