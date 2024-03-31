@@ -1,5 +1,8 @@
 package vn.webbanthuocdao.dao.implement;
 
-public class nhanVienDao {
+import vn.webbanthuoc.dao.IDao;
+import vn.webbanthuoc.entity.nhanVien;
+
+public class nhanVienDao implements IDao<nhanVien>{
 
 }
