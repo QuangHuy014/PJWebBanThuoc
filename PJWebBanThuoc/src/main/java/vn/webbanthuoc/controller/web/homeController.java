@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class homeController
  */
-@WebServlet({"/homeController","/product-Detail","/cart"})
+@WebServlet({"/homeController","/product-Detail","/cart","/client/addToCart"})
 public class homeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -24,12 +24,11 @@ public class homeController extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
+	/** 
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		RequestDispatcher rd = request.getRequestDispatcher("/views/web/trangchu.jsp");
-//		rd.forward(request, response);
+
 		String action=request.getServletPath();
 		try {
 			switch (action) {
@@ -43,7 +42,7 @@ public class homeController extends HttpServlet {
 				rd.forward(request, response);
 				break;
 			}
-			case "/cart": {
+			case "/client/addToCart": {
 				RequestDispatcher rd = request.getRequestDispatcher("/views/web/cart.jsp");
 				rd.forward(request, response);
 				break;
@@ -52,7 +51,7 @@ public class homeController extends HttpServlet {
 				throw new IllegalArgumentException("Unexpected value: " + action);
 			}
 		} catch (Exception e) {
-	
+			// TODO: handle exception
 		}
 	}
 
@@ -62,5 +61,15 @@ public class homeController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	}
+	protected void doAddToCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int quantity=1;
+		int id;
+		if(request.getParameter("productId")!=null) {
+			id=Integer.parseInt(request.getParameter("productId"));
+			Product pr=
+		}
+	}
+	
 
 }
+
