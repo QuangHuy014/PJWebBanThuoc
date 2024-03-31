@@ -18,4 +18,33 @@ public class loginController extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("views/web/tranglogin.jsp");
 		rd.forward(request, response);
 	}	
+	
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+		String uri = req.getRequestURI();
+		if(uri.contains("sign-in")) {
+			this.doSignIn(req,resp);
+		}
+		else if (uri.contains("sign-up")) {
+			this.doSignUp(req,resp);
+		}
+		else if(uri.contains("sign-out")) {
+			this.doSignOut(req,resp);
+		}
+		else if(uri.contains("forgot-password")) {
+			this.doForgot(req,resp);
+		}
+		else if(uri.contains("change-password")) {
+			this.doChange(req,resp);
+		}
+		else if(uri.contains("edit-profile")) {
+			this.doEdit(req,resp);
+		}
+				
+				
+				
+			
+		
+	}
+	
+	
 }
