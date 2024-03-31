@@ -28,8 +28,6 @@
 		<servlet-name>homeController</servlet-name>
 	 <url-pattern>/HomeController</url-pattern> 
 	</servlet-mapping>
-	
-	<display-name>PJWebBanThuoc</display-name>
 
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
