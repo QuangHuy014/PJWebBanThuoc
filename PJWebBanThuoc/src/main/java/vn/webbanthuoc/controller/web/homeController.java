@@ -86,6 +86,7 @@ public class homeController extends HttpServlet {
 					hoaDon hd=new hoaDon();
 					List<Thuoc> listThuocs=new ArrayList<Thuoc>();
 					hoaDonChiTiet hdct=new hoaDonChiTiet();
+					
 				}
 			}
 		}
