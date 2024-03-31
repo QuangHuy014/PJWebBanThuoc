@@ -16,17 +16,11 @@ import javax.servlet.http.HttpServletResponse;
 public class homeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+  
     public homeController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/** 
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String action=request.getServletPath();
@@ -66,7 +60,7 @@ public class homeController extends HttpServlet {
 		int id;
 		if(request.getParameter("productId")!=null) {
 			id=Integer.parseInt(request.getParameter("productId"));
-			Product pr=
+//			Product pr=
 		}
 	}
 	
