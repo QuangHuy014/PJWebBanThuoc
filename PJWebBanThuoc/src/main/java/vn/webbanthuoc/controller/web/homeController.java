@@ -28,8 +28,7 @@ public class homeController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		RequestDispatcher rd = request.getRequestDispatcher("/views/web/trangchu.jsp");
-//		rd.forward(request, response);
+
 		String action=request.getServletPath();
 		try {
 			switch (action) {
