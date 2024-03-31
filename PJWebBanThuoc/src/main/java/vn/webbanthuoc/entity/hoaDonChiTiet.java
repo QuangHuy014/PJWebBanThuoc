@@ -4,6 +4,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -22,6 +23,8 @@ public class hoaDonChiTiet {
     
     @ManyToOne
     private hoaDon hoaDon;
+    @OneToMany
+    private Thuoc thuoc;
 
 	public hoaDonChiTiet() {
 		super();
@@ -61,8 +64,8 @@ public class hoaDonChiTiet {
 		return idThuoc;
 	}
 
-	public void setIdThuoc(int idThuoc) {
-		this.idThuoc = idThuoc;
+	public void setIdThuoc(int id) {
+		this.idThuoc = id;
 	}
 
 	public String getTenThuoc() {

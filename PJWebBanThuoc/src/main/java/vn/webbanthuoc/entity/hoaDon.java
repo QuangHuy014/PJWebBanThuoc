@@ -21,6 +21,51 @@ public class hoaDon {
     // Mối quan hệ với HoaDonChiTiet
     @OneToMany(mappedBy = "hoaDon")
     private List<hoaDonChiTiet> chiTietHoaDonList;
+
+	public hoaDon() {
+		super();
+	}
+
+	public hoaDon(int idHoaDon, LocalDate ngayTao, double tongTien, List<hoaDonChiTiet> chiTietHoaDonList) {
+		super();
+		this.idHoaDon = idHoaDon;
+		this.ngayTao = ngayTao;
+		this.tongTien = tongTien;
+		this.chiTietHoaDonList = chiTietHoaDonList;
+	}
+
+	public int getIdHoaDon() {
+		return idHoaDon;
+	}
+
+	public void setIdHoaDon(int idHoaDon) {
+		this.idHoaDon = idHoaDon;
+	}
+
+	public LocalDate getNgayTao() {
+		return ngayTao;
+	}
+
+	public void setNgayTao(LocalDate ngayTao) {
+		this.ngayTao = ngayTao;
+	}
+
+	public double getTongTien() {
+		return tongTien;
+	}
+
+	public void setTongTien(double tongTien) {
+		this.tongTien = tongTien;
+	}
+
+	public List<hoaDonChiTiet> getChiTietHoaDonList() {
+		return chiTietHoaDonList;
+	}
+
+	public void setChiTietHoaDonList(List<hoaDonChiTiet> chiTietHoaDonList) {
+		this.chiTietHoaDonList = chiTietHoaDonList;
+	}
     
-    // Constructors, getters and setters
+   
+    
 }
