@@ -52,17 +52,17 @@ public class homeController extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	}
-	protected void doAddToCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int quantity=1;
-		int id;
-		if(request.getParameter("productId")!=null) {
-			id=Integer.parseInt(request.getParameter("productId"));
-//			Product pr=
-		}
-	}
+//	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		
+//	}
+//	protected void doAddToCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		int quantity=1;
+//		int id;
+//		if(request.getParameter("productId")!=null) {
+//			id=Integer.parseInt(request.getParameter("productId"));
+////			Product pr=
+//		}
+//	}
 	
 
 }
