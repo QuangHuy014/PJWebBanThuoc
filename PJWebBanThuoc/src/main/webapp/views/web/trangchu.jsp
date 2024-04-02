@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
- <%@include file="/common/taglib.jsp"%>
+<%@include file="/common/taglib.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -806,10 +806,10 @@
 						</div>
 					</div>
 
-					 <button class="btn btn-primary btn-dark d-block mx-auto px-4 my-2" type="button"
-                        style="display: block; margin: 0 auto; background-color: #3153DC;">
-                        Xem tất cả Hỗ trợ sinh lý >
-                    </button>
+					<button class="btn btn-primary btn-dark d-block mx-auto px-4 my-2"
+						type="button"
+						style="display: block; margin: 0 auto; background-color: #3153DC;">
+						Xem tất cả Hỗ trợ sinh lý ></button>
 
 
 
@@ -930,10 +930,10 @@
 
 
 					<!----------------------------------------------------->
-					 <button class="btn btn-primary btn-dark d-block mx-auto px-4 my-2" type="button"
-                        style="display: block; margin: 0 auto; background-color: #3153DC;">
-                        Xem tất cả Hỗ trợ sinh lý >
-                    </button>
+					<button class="btn btn-primary btn-dark d-block mx-auto px-4 my-2"
+						type="button"
+						style="display: block; margin: 0 auto; background-color: #3153DC;">
+						Xem tất cả Hỗ trợ sinh lý ></button>
 
 					<!----------------------sản phẩm khác---------------------------------------->
 					<div class="container mt-5" id="product-cards">
@@ -1053,10 +1053,10 @@
 						</div>
 					</div>
 					<!--------------------------------sản phẩm khác----------------------------------------------->
-					 <button class="btn btn-primary btn-dark d-block mx-auto px-4 my-2" type="button"
-                        style="display: block; margin: 0 auto; background-color: #3153DC;">
-                        Xem tất cả Hỗ trợ sinh lý >
-                    </button>
+					<button class="btn btn-primary btn-dark d-block mx-auto px-4 my-2"
+						type="button"
+						style="display: block; margin: 0 auto; background-color: #3153DC;">
+						Xem tất cả Hỗ trợ sinh lý ></button>
 
 					<div class="container">
 						<div class="bg-light px-2 rounded mt-3">

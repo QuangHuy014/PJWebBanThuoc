@@ -25,17 +25,11 @@ public class homeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	thuocDao thuocdao=new thuocDao();
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+  
     public homeController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/** 
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String action=request.getServletPath();
@@ -63,9 +57,7 @@ public class homeController extends HttpServlet {
 		}
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	}
@@ -84,7 +76,6 @@ public class homeController extends HttpServlet {
 		        if (session.getAttribute("gioHang") == null) {
 		          List<hoaDonChiTiet> listcthds=new ArrayList<hoaDonChiTiet>();
 		          hoaDonChiTiet hdct=new hoaDonChiTiet();
-				     // Tính toán và thiết lập giá, thành tiền, v.v. cho mục hàng
 				        double gia = thuoc.getGia();
 				        double thanhTien = gia * soLuong;
 				        String donVi = thuoc.getDonVi();
@@ -120,7 +111,7 @@ public class homeController extends HttpServlet {
 		}
 
 	}
-	
+
 
 }
 

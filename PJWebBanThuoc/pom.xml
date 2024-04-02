@@ -1,23 +1,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>vn.longchau</groupId>
-    <artifactId>PJWebBanThuoc</artifactId>
-    <version>0.1</version>
-    <packaging>war</packaging>
-    
-    <properties>
-        <jsp.api.version>2.0</jsp.api.version>
-        <jstl.version>1.2</jstl.version>
-        <servlet.api.version>4.0.1</servlet.api.version> <!-- Sử dụng Servlet API 4.0.1 -->
-        <sitemesh.version>2.4.2</sitemesh.version>
-        <mysql.version>8.0.28</mysql.version>
-        <weld.servlet.version>1.1.0.Final</weld.servlet.version>
-        <maven.compiler.source>17</maven.compiler.source> <!-- Sử dụng JDK 17 -->
-        <maven.compiler.target>17</maven.compiler.target> <!-- Sử dụng JDK 17 -->
-    </properties>
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>vn.longchau</groupId>
+	<artifactId>PJWebBanThuoc</artifactId>
+	<version>0.1</version>
+	<packaging>war</packaging>
+
+	<properties>
+		<jsp.api.version>2.0</jsp.api.version>
+		<jstl.version>1.2</jstl.version>
+		<servlet.api.version>3.1.0</servlet.api.version>
+		<sitemesh.version>2.4.2</sitemesh.version>
+		<mysql.version>8.0.28</mysql.version>
+		<weld.servlet.version>1.1.0.Final</weld.servlet.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
 
  <dependencies>
 		<dependency>
@@ -46,13 +47,11 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.jboss.weld.servlet</groupId>
 			<artifactId>weld-servlet</artifactId>
 			<version>${weld.servlet.version}</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
@@ -147,6 +146,7 @@
 		</dependency>
 
 	</dependencies>
+
     
     <build>
         <plugins>
@@ -164,3 +164,4 @@
         </plugins>
     </build>
 </project>
+
