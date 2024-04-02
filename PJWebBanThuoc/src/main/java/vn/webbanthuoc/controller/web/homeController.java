@@ -17,9 +17,6 @@ import vn.webbanthuoc.entity.hoaDon;
 import vn.webbanthuoc.entity.hoaDonChiTiet;
 import vn.webbanthuocdao.dao.implement.thuocDao;
 
-/**
- * Servlet implementation class homeController
- */
 @WebServlet({"/homeController","/product-Detail","/cart","/client/addToCart"})
 public class homeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
