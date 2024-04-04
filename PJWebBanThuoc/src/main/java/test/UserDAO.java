@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
@@ -62,39 +63,50 @@ public class UserDAO{
 		}
 	}
 
-	public User findById(String id) {
-		EntityManager em = JpaUtils.getEntityManager();
-		User entity = em.find(User.class, id);
-		return entity;
-	}
-
-//	public List<User> findAll() {
+//	public User findById(String id) {
 //		EntityManager em = JpaUtils.getEntityManager();
-//		String jpql = "SELECT u FROM User u";
-//		TypedQuery<User> query = em.createQuery(jpql, User.class);
-//		List<User> list = query.getResultList();
-//		return list;
+//		User entity = em.find(User.class, id);
+//		return entity;
 //	}
-
-	
-//	public List<User> findAll(int page, int pageSize) {
-//	    EntityManager em = JpaUtils.getEntityManager();
-//	    TypedQuery<User> query = em.createNamedQuery("User.findAll", User.class);
-//	    query.setFirstResult(page * pageSize);
-//	    query.setMaxResults(pageSize);
-//	    return query.getResultList();
-//	}
-
-	
-
-	public User checkLogin(String id, String password) {
-		EntityManager em = JpaUtils.getEntityManager();
-		String japl = "select u from User u where u.Id = :Id and u.Password = :Password";
-		TypedQuery<User> query = em.createQuery(japl, User.class);
-		query.setParameter("id", id);
-		query.setParameter("password", password);
-		return query.getSingleResult();
+	public User findById(String tenDangNhap) {
+	    EntityManager em = JpaUtils.getEntityManager();
+	    try {
+	        String jpaQuery = "SELECT u FROM User u WHERE u.tenDangNhap = :tenDangNhap";
+	        TypedQuery<User> query = em.createQuery(jpaQuery, User.class);
+	        query.setParameter("tenDangNhap", tenDangNhap);
+	        return query.getSingleResult();
+	    } catch (NoResultException e) {
+	        return null; // Trả về null nếu không tìm thấy user
+	    } finally {
+	        em.close();
+	    }
 	}
+
+	
+
+//	public User checkLogin(String id, String password) {
+//		EntityManager em = JpaUtils.getEntityManager();
+//		String japl = "select u from User u where u.Id = :Id and u.Password = :Password";
+//		TypedQuery<User> query = em.createQuery(japl, User.class);
+//		query.setParameter("id", id);
+//		query.setParameter("password", password);
+//		return query.getSingleResult();
+//	}
+	public User checkLogin(String tenDangNhap, String matKhau) {
+	    EntityManager em = JpaUtils.getEntityManager();
+	    try {
+	        String jpaQuery = "SELECT u FROM User u WHERE u.tenDangNhap = :tenDangNhap AND u.matKhau = :matKhau";
+	        TypedQuery<User> query = em.createQuery(jpaQuery, User.class);
+	        query.setParameter("tenDangNhap", tenDangNhap);
+	        query.setParameter("matKhau", matKhau);
+	        return query.getSingleResult();
+	    } catch (NoResultException e) {
+	        return null; // Trả về null nếu không tìm thấy user
+	    } finally {
+	        em.close();
+	    }
+	}
+
 
 	public List<User> findAll() {
 		EntityManager em = JpaUtils.getEntityManager();

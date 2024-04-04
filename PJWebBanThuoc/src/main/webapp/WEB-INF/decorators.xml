@@ -11,13 +11,16 @@
 
  
 
+  <!--   <decorator name="web" page="trangchu.jsp">
+        <pattern>/homeController</pattern>
+    </decorator> -->
     <decorator name="web" page="trangchu.jsp">
         <pattern>/homeController</pattern>
     </decorator>
 
     
   <decorator name="login" page="tranglogin.jsp">
-        <pattern>/loginController</pattern>
+        <pattern>/Login</pattern>
     </decorator>
     <decorator name="productDetail" page="productDetail.jsp">
         <pattern>/product-Detail</pattern>

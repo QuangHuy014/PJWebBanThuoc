@@ -22,8 +22,7 @@ public class User {
 	@Column(name = "Ten")
 	String ten;
 	@Column(name = "GioiTinh")
-	boolean gioiTinh = false;
-	
+	private boolean gioiTinh;
 	public User() {
 		super();
 	}
