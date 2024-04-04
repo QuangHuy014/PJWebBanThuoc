@@ -17,7 +17,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="login-wrap p-0">
               <h3 class="mb-4 text-center">Create an Account</h3>
-              <form action="/PJWebBanThuoc/Login" class="signin-form">
+              <form action="/PJWebBanThuoc/homeController" class="signin-form">
                 <div class="form-group">
                   <input type="text" class="form-control" name="tenDangNhap" placeholder="Username" required>
                 </div>

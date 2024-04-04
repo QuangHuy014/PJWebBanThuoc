@@ -9,73 +9,66 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "KhachHang")
-@NamedQuery(name = "User.findAll", query = "SELECT u FROM User u order by u.idKhachHang")
+@NamedQuery(name = "User.findAll", query = "SELECT u FROM User u order by u.idkhachhang")
 public class User {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name = "IDKhachHang")
-	int idKhachHang;
+	int idkhachhang;
 	@Column(name = "TenDangNhap")
-	String tenDangNhap;
+	String tendangnhap;
 	@Column(name = "MatKhau")
-	String matKhau;
+	String matkhau;
 	@Column(name = "Ten")
 	String ten;
 	@Column(name = "GioiTinh")
-	private boolean gioiTinh;
+	private boolean gioitinh;
 	public User() {
 		super();
 	}
-
-	public User(int idKhachHang, String tenDangNhap, String matKhau, String ten, boolean gioiTinh) {
+	public User(int idkhachhang, String tendangnhap, String matkhau, String ten, boolean gioitinh) {
 		super();
-		this.idKhachHang = idKhachHang;
-		this.tenDangNhap = tenDangNhap;
-		this.matKhau = matKhau;
+		this.idkhachhang = idkhachhang;
+		this.tendangnhap = tendangnhap;
+		this.matkhau = matkhau;
 		this.ten = ten;
-		this.gioiTinh = gioiTinh;
+		this.gioitinh = gioitinh;
 	}
-
-	public int getIdKhachHang() {
-		return idKhachHang;
+	public int getIdkhachhang() {
+		return idkhachhang;
 	}
-
-	public void setIdKhachHang(int idKhachHang) {
-		this.idKhachHang = idKhachHang;
+	public void setIdkhachhang(int idkhachhang) {
+		this.idkhachhang = idkhachhang;
 	}
-
-	public String getTenDangNhap() {
-		return tenDangNhap;
+	public String getTendangnhap() {
+		return tendangnhap;
 	}
-
-	public void setTenDangNhap(String tenDangNhap) {
-		this.tenDangNhap = tenDangNhap;
+	public void setTendangnhap(String tendangnhap) {
+		this.tendangnhap = tendangnhap;
 	}
-
-	public String getMatKhau() {
-		return matKhau;
+	public String getMatkhau() {
+		return matkhau;
 	}
-
-	public void setMatKhau(String matKhau) {
-		this.matKhau = matKhau;
+	public void setMatkhau(String matkhau) {
+		this.matkhau = matkhau;
 	}
-
 	public String getTen() {
 		return ten;
 	}
-
 	public void setTen(String ten) {
 		this.ten = ten;
 	}
-
-	public boolean isGioiTinh() {
-		return gioiTinh;
+	public boolean isGioitinh() {
+		return gioitinh;
+	}
+	public void setGioitinh(boolean gioitinh) {
+		this.gioitinh = gioitinh;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
-	public void setGioiTinh(boolean gioiTinh) {
-		this.gioiTinh = gioiTinh;
-	}
-
+	
 	
 
 	

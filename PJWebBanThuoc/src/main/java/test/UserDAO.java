@@ -3,11 +3,14 @@ package test;
 import java.util.List;
 
 
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+
+
 
 
 public class UserDAO{
@@ -68,12 +71,12 @@ public class UserDAO{
 //		User entity = em.find(User.class, id);
 //		return entity;
 //	}
-	public User findById(String tenDangNhap) {
+	public User findById(String tendangnhap) {
 	    EntityManager em = JpaUtils.getEntityManager();
 	    try {
-	        String jpaQuery = "SELECT u FROM User u WHERE u.tenDangNhap = :tenDangNhap";
+	        String jpaQuery = "SELECT u FROM User u WHERE u.tendangnhap = :tendangnhap";
 	        TypedQuery<User> query = em.createQuery(jpaQuery, User.class);
-	        query.setParameter("tenDangNhap", tenDangNhap);
+	        query.setParameter("tendangnhap", tendangnhap);
 	        return query.getSingleResult();
 	    } catch (NoResultException e) {
 	        return null; // Trả về null nếu không tìm thấy user
@@ -92,13 +95,13 @@ public class UserDAO{
 //		query.setParameter("password", password);
 //		return query.getSingleResult();
 //	}
-	public User checkLogin(String tenDangNhap, String matKhau) {
+	public User checkLogin(String tendangnhap, String matkhau) {
 	    EntityManager em = JpaUtils.getEntityManager();
 	    try {
-	        String jpaQuery = "SELECT u FROM User u WHERE u.tenDangNhap = :tenDangNhap AND u.matKhau = :matKhau";
+	        String jpaQuery = "SELECT u FROM User u WHERE u.tendangnhap = :tendangnhap AND u.matkhau = :matkhau";
 	        TypedQuery<User> query = em.createQuery(jpaQuery, User.class);
-	        query.setParameter("tenDangNhap", tenDangNhap);
-	        query.setParameter("matKhau", matKhau);
+	        query.setParameter("tendangnhap", tendangnhap);
+	        query.setParameter("matkhau", matkhau);
 	        return query.getSingleResult();
 	    } catch (NoResultException e) {
 	        return null; // Trả về null nếu không tìm thấy user
@@ -106,6 +109,7 @@ public class UserDAO{
 	        em.close();
 	    }
 	}
+
 
 
 	public List<User> findAll() {
