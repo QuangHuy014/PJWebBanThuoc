@@ -2,133 +2,146 @@ package test;
 
 import java.util.List;
 
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
+
 public class UserDAO{
+	@Override
+	protected void finalize() throws Throwable {
+		EntityManager em = JpaUtils.getEntityManager();
+		em.close();
+		super.finalize();
+	}
+
 	public void create(User user) {
-		EntityManager em = JpaUtils.getEntityManager();	
-		EntityTransaction tran = em.getTransaction();
-		
+		EntityManager em = JpaUtils.getEntityManager();
 		try {
-			tran.begin();
-			
+			em.getTransaction().begin();
 			em.persist(user);
-			
-			tran.commit();
-			
-			
+			em.getTransaction().commit();
 		} catch (Exception e) {
 			e.printStackTrace();
-			
-			tran.rollback();
-			System.out.println("Lỗi trùng ID");
+			em.getTransaction().rollback();
 			throw e;
-		}finally {
+		} finally {
 			em.close();
 		}
-		
 	}
-    public void update(User user) {
-    	EntityManager em = JpaUtils.getEntityManager();
-    	
-    	EntityTransaction tran = em.getTransaction();
-    	
-    	try {
-			tran.begin();
-			
+
+	public void update(User user) {
+		EntityManager em = JpaUtils.getEntityManager();
+		try {
+			em.getTransaction().begin();
 			em.merge(user);
-			
-			tran.commit();
-			
+			em.getTransaction().commit();
 		} catch (Exception e) {
 			e.printStackTrace();
-			tran.rollback();
+			em.getTransaction().rollback();
 			throw e;
-		}finally {
+		} finally {
 			em.close();
 		}
-    }
-//    
-//    public void deleteAll() {
-//    	EntityManager em = JpaUtils.getEntityManager();
-//    	EntityTransaction tran = em.getTransaction();
-//    	
-//    	String  jqpl = "Delete from User";
-//    	
-//    	try {
-//			tran.begin();
-//			em.createQuery(jqpl).executeUpdate();
-//			tran.commit();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//			tran.rollback();
-//		}
-//    }
-    
-    public void delete(String id) throws Exception {
-    	EntityManager em = JpaUtils.getEntityManager();
-    	EntityTransaction tran = em.getTransaction();
-    	
-    	try {
-			tran.begin();
+	}
+
+	public void delete(String id) throws Exception {
+		EntityManager em = JpaUtils.getEntityManager();
+		try {
+			em.getTransaction().begin();
 			User user = em.find(User.class, id);
-			if(user != null) {
-				em.remove(user);
-			}else {
-				throw new Exception("This user does not exist!");
-			}
-			tran.commit();
-			
+			em.remove(user);
+			em.getTransaction().commit();
 		} catch (Exception e) {
+			em.getTransaction().rollback();
 			e.printStackTrace();
-			tran.rollback();
-			throw e;
-		}finally {
+		} finally {
 			em.close();
 		}
 	}
-    
-    public List<User> findAll() {
-    	EntityManager em = JpaUtils.getEntityManager();
-    	String sql = "Select u from User u";
-    	TypedQuery<User> query = em.createQuery(sql, User.class);
-    	return query.getResultList();
+
+	public User findById(String id) {
+		EntityManager em = JpaUtils.getEntityManager();
+		User entity = em.find(User.class, id);
+		return entity;
 	}
-    
-    public List<User> findByRole(boolean role) {
-    	EntityManager em = JpaUtils.getEntityManager();
-    	EntityTransaction tran = em.getTransaction();
-    	
-    	String jqpl = "Select o from User o where o.admin =:role";
-    	TypedQuery<User> query = em.createQuery(jqpl, User.class);
-    	query.setParameter("role", role);
-    	
-    	return query.getResultList();
-		
+
+//	public List<User> findAll() {
+//		EntityManager em = JpaUtils.getEntityManager();
+//		String jpql = "SELECT u FROM User u";
+//		TypedQuery<User> query = em.createQuery(jpql, User.class);
+//		List<User> list = query.getResultList();
+//		return list;
+//	}
+
+	
+//	public List<User> findAll(int page, int pageSize) {
+//	    EntityManager em = JpaUtils.getEntityManager();
+//	    TypedQuery<User> query = em.createNamedQuery("User.findAll", User.class);
+//	    query.setFirstResult(page * pageSize);
+//	    query.setMaxResults(pageSize);
+//	    return query.getResultList();
+//	}
+
+	
+
+	public User checkLogin(String id, String password) {
+		EntityManager em = JpaUtils.getEntityManager();
+		String japl = "select u from User u where u.Id = :Id and u.Password = :Password";
+		TypedQuery<User> query = em.createQuery(japl, User.class);
+		query.setParameter("id", id);
+		query.setParameter("password", password);
+		return query.getSingleResult();
 	}
-    
-    public List<User> findBykeyWord(String keyword) {
-    	EntityManager em = JpaUtils.getEntityManager();
-    	EntityTransaction tran = em.getTransaction();
-    	
-    	String jqpl = "Select o from User o where o.fullname like ?0";
-    	
-    	TypedQuery<User> query = em.createQuery(jqpl,User.class);
-    	query.setParameter(0, keyword);
-    	return query.getResultList();
+
+	public List<User> findAll() {
+		EntityManager em = JpaUtils.getEntityManager();
+		TypedQuery<User> query = em.createNamedQuery("User.findAll", User.class);
+		return query.getResultList();
 	}
-    
-    public User findOne(String id, String password) {
-    	EntityManager em = JpaUtils.getEntityManager();
-    	EntityTransaction tran = em.getTransaction();
-    	String jqpl = "Select o from User o where o.id = :id And o.password=:pw";
-    	TypedQuery<User> query = em.createQuery(jqpl, User.class);
-    	query.setParameter("id", id);
-    	query.setParameter("pw", password);
-    	return query.getSingleResult();
-    	
-    }
+	public List<User> findByFullname(String fullname) {
+	    EntityManager em = JpaUtils.getEntityManager();
+	    String jpaQuery = "SELECT u FROM User u WHERE u.fullname LIKE :fullname";
+	    TypedQuery<User> query = em.createQuery(jpaQuery, User.class);
+	    query.setParameter("fullname", "%" + fullname + "%");
+	    return query.getResultList();
+	}
+
+//// ghi chú
+	public List<User> findAll(int page, int pageSize) {
+	    EntityManager em = JpaUtils.getEntityManager();
+	    TypedQuery<User> query = em.createNamedQuery("User.findAll", User.class);
+	    query.setFirstResult(page * pageSize);
+	    query.setMaxResults(pageSize);
+	    return query.getResultList();
+	}
+
+//	public List<User> findByFullname(String fullname, int page, int pageSize) {
+//	    EntityManager em = JpaUtils.getEntityManager();
+//	    String jpaQuery = "SELECT u FROM User u WHERE u.fullname LIKE :fullname";
+//	    TypedQuery<User> query = em.createQuery(jpaQuery, User.class);
+//	    query.setParameter("fullname", "%" + fullname + "%");
+//	    query.setFirstResult(page * pageSize);
+//	    query.setMaxResults(pageSize);
+//	    return query.getResultList();
+//	}
+
+	public long countAll() {
+	    EntityManager em = JpaUtils.getEntityManager();
+	    TypedQuery<Long> query = em.createQuery("SELECT COUNT(u) FROM User u", Long.class);
+	    return query.getSingleResult();
+	}
+
+
+	
+
+	public int count() {
+		EntityManager em = JpaUtils.getEntityManager();
+		String japl = "select count( u) from User u ";
+		Query query = em.createQuery(japl);
+		return ((Long) query.getSingleResult()).intValue();
+	}
 	
 }

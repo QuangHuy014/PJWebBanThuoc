@@ -5,9 +5,12 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class JpaUtils {
-  public static EntityManager getEntityManager() {
-	  EntityManagerFactory emf = Persistence.createEntityManagerFactory("WebBanThuoc");
-	  
-	  return emf.createEntityManager();
-  }
+	private static EntityManagerFactory factory;
+
+	public static EntityManager getEntityManager() {
+		if (factory == null || !factory.isOpen()) {
+			factory = Persistence.createEntityManagerFactory("ASM2");
+		}
+		return factory.createEntityManager();
+	}
 }
