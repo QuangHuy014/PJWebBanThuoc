@@ -21,20 +21,36 @@ public class UserDAO{
 		super.finalize();
 	}
 
+//	public void create(User user) {
+//		EntityManager em = JpaUtils.getEntityManager();
+//		try {
+//			em.getTransaction().begin();
+//			em.persist(user);
+//			em.getTransaction().commit();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			em.getTransaction().rollback();
+//			throw e;
+//		} finally {
+//			em.close();
+//		}
+//	}
 	public void create(User user) {
-		EntityManager em = JpaUtils.getEntityManager();
-		try {
-			em.getTransaction().begin();
-			em.persist(user);
-			em.getTransaction().commit();
-		} catch (Exception e) {
-			e.printStackTrace();
-			em.getTransaction().rollback();
-			throw e;
-		} finally {
-			em.close();
-		}
+	    EntityManager em = JpaUtils.getEntityManager();
+	    try {
+	        em.getTransaction().begin();
+	        em.persist(user);
+	        em.getTransaction().commit();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        em.getTransaction().rollback();
+	        throw e;
+	    } finally {
+	        em.close();
+	    }
 	}
+
+
 
 	public void update(User user) {
 		EntityManager em = JpaUtils.getEntityManager();

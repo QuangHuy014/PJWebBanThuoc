@@ -1,6 +1,8 @@
  <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@include file="/common/taglib.jsp" %> 
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+ 
 <!DOCTYPE html>
 <html>
  <head>
@@ -17,7 +19,7 @@
  <link href="<c:url value='/template/web/login-form-20/login-form-20/css/style3.css'/>" rel="stylesheet"> 
    
 </head>
- <body class="img js-fullheight" style="background-image: url(https://nhathuoclongchau.com.vn/estore-images/home/heath/heath-check.png);">
+ <body class="img js-fullheight" style="background-image: url(https://nhathuoclongchau.com.vn/estore-images/home/heath/heath-check.png);" method="POST">
 
 <dec:body/>
 
@@ -32,4 +34,4 @@
 <!-- Template Javascript  -->
  
 
-</html> 
+</html>  

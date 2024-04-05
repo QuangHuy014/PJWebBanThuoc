@@ -2,9 +2,11 @@ package vn.webbanthuoc.controller.web;
 
 import java.io.IOException;
 
+
+
 import java.lang.reflect.InvocationTargetException;
 
-import javax.persistence.NoResultException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +19,7 @@ import org.apache.commons.beanutils.BeanUtils;
 import test.User;
 import test.UserDAO;
 
-@WebServlet({"/Login","/homeController"})
+@WebServlet({"/Login", "/Home"})
 public class loginController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -30,16 +32,16 @@ public class loginController extends HttpServlet {
 			throws ServletException, IOException {
 		String action = request.getServletPath();
 		switch (action) {
-		case "/Login":
+		case "/Home":
 			try {
-				Login(request, response);
+				trangchu(request, response);
 			} catch (IllegalAccessException | InvocationTargetException e) {
 				e.printStackTrace();
 			}
 			break;
-		case "/homeController":
+		case "/Login":
 			try {
-				trangchu(request, response);
+				Login(request, response);
 			} catch (IllegalAccessException | InvocationTargetException e) {
 				e.printStackTrace();
 			}
@@ -52,25 +54,31 @@ public class loginController extends HttpServlet {
 		request.getRequestDispatcher("/views/web/trangchu.jsp").forward(request, response);
 	}
 
-	private void Login(HttpServletRequest request, HttpServletResponse response)
-			throws IllegalAccessException, InvocationTargetException, ServletException, IOException {
-		UserDAO userDao = new UserDAO();
-		if (request.getMethod().equalsIgnoreCase("POST")) {
-			if (request.getParameter("buttonLogin") != null) {
-				String tenDN = request.getParameter("tendangnhap");
-				String pass = request.getParameter("matkhau");
-				User user = userDao.findById(tenDN);
-				if (!user.getMatkhau().equals(pass)) {
-					request.setAttribute("message", "Please fill right");
-				} else {
-					request.setAttribute("message", "Login succeed");
-					request.getSession().setAttribute("user", user);
-				}
-
-			}
-
-		}
-		request.getRequestDispatcher("/views/web/tranglogin.jsp").forward(request, response);
-
-	}
+    private void Login(HttpServletRequest request, HttpServletResponse response)
+            throws IllegalAccessException, InvocationTargetException, ServletException, IOException {
+        UserDAO userDao = new UserDAO();
+        if (request.getMethod().equalsIgnoreCase("POST")) {
+            if (request.getParameter("buttonLogin") != null) {
+                String tenDN = request.getParameter("tendangnhap");
+                String pass = request.getParameter("matkhau");
+                User user = userDao.findById(tenDN);
+                if (user != null && user.getMatkhau().equals(pass)) {
+                    request.setAttribute("message", "Login succeed");
+                    request.getSession().setAttribute("user", user);
+                    // Nếu đăng nhập thành công, chuyển hướng đến trang Home
+                    response.sendRedirect(request.getContextPath() + "/Home");
+                    return; // Chấm dứt xử lý ở đây để không chuyển hướng đến trang login nữa
+                } else {
+                    request.setAttribute("message", "Invalid username or password");
+                    // Đặt lại các giá trị form để người dùng không phải nhập lại
+                    request.setAttribute("tendangnhap", tenDN);
+                    // Forward (chuyển tiếp) lại đến trang login để hiển thị thông báo lỗi
+                    request.getRequestDispatcher("/views/web/tranglogin.jsp").forward(request, response);
+                    return; // Chấm dứt xử lý ở đây để không chuyển hướng đến trang Home
+                }
+            }
+        }
+        request.getRequestDispatcher("/views/web/tranglogin.jsp").forward(request, response);
+    }
 }
+

@@ -17,7 +17,12 @@
     <decorator name="web" page="trangchu.jsp">
         <pattern>/homeController</pattern>
     </decorator>
-
+    <decorator name="home" page="trangchu.jsp">
+        <pattern>/Home</pattern>
+    </decorator>
+<decorator name="dangnhap" page="tranglogin.jsp">
+        <pattern>/DangNhap</pattern>
+    </decorator>
     
   <decorator name="login" page="tranglogin.jsp">
         <pattern>/Login</pattern>
@@ -52,6 +57,9 @@
     </decorator>
     <decorator name="vi" page="vi.jsp">
         <pattern>/viController</pattern>
+    </decorator>
+    <decorator name="dangki" page="trangdangky.jsp">
+        <pattern>/DangKy</pattern>
     </decorator>
 
 
