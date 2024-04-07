@@ -13,7 +13,7 @@ import javax.persistence.TypedQuery;
 
 
 
-public class UserDAO{
+public class KhachHangDao{
 	@Override
 	protected void finalize() throws Throwable {
 		EntityManager em = JpaUtils.getEntityManager();
@@ -35,11 +35,11 @@ public class UserDAO{
 //			em.close();
 //		}
 //	}
-	public void create(User user) {
+	public void create(KhachHang kh) {
 	    EntityManager em = JpaUtils.getEntityManager();
 	    try {
 	        em.getTransaction().begin();
-	        em.persist(user);
+	        em.persist(kh);
 	        em.getTransaction().commit();
 	    } catch (Exception e) {
 	        e.printStackTrace();
@@ -52,11 +52,11 @@ public class UserDAO{
 
 
 
-	public void update(User user) {
+	public void update(KhachHang kh) {
 		EntityManager em = JpaUtils.getEntityManager();
 		try {
 			em.getTransaction().begin();
-			em.merge(user);
+			em.merge(kh);
 			em.getTransaction().commit();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -71,8 +71,8 @@ public class UserDAO{
 		EntityManager em = JpaUtils.getEntityManager();
 		try {
 			em.getTransaction().begin();
-			User user = em.find(User.class, id);
-			em.remove(user);
+			KhachHang kh = em.find(KhachHang.class, id);
+			em.remove(kh);
 			em.getTransaction().commit();
 		} catch (Exception e) {
 			em.getTransaction().rollback();
@@ -87,11 +87,11 @@ public class UserDAO{
 //		User entity = em.find(User.class, id);
 //		return entity;
 //	}
-	public User findById(String tendangnhap) {
+	public KhachHang findById(String tendangnhap) {
 	    EntityManager em = JpaUtils.getEntityManager();
 	    try {
-	        String jpaQuery = "SELECT u FROM User u WHERE u.tendangnhap = :tendangnhap";
-	        TypedQuery<User> query = em.createQuery(jpaQuery, User.class);
+	        String jpaQuery = "SELECT u FROM KhachHang u WHERE u.tendangnhap = :tendangnhap";
+	        TypedQuery<KhachHang> query = em.createQuery(jpaQuery, KhachHang.class);
 	        query.setParameter("tendangnhap", tendangnhap);
 	        return query.getSingleResult();
 	    } catch (NoResultException e) {
@@ -111,11 +111,11 @@ public class UserDAO{
 //		query.setParameter("password", password);
 //		return query.getSingleResult();
 //	}
-	public User checkLogin(String tendangnhap, String matkhau) {
+	public KhachHang checkLogin(String tendangnhap, String matkhau) {
 	    EntityManager em = JpaUtils.getEntityManager();
 	    try {
-	        String jpaQuery = "SELECT u FROM User u WHERE u.tendangnhap = :tendangnhap AND u.matkhau = :matkhau";
-	        TypedQuery<User> query = em.createQuery(jpaQuery, User.class);
+	        String jpaQuery = "SELECT u FROM KhachHang u WHERE u.tendangnhap = :tendangnhap AND u.matkhau = :matkhau";
+	        TypedQuery<KhachHang> query = em.createQuery(jpaQuery, KhachHang.class);
 	        query.setParameter("tendangnhap", tendangnhap);
 	        query.setParameter("matkhau", matkhau);
 	        return query.getSingleResult();
@@ -128,23 +128,23 @@ public class UserDAO{
 
 
 
-	public List<User> findAll() {
+	public List<KhachHang> findAll() {
 		EntityManager em = JpaUtils.getEntityManager();
-		TypedQuery<User> query = em.createNamedQuery("User.findAll", User.class);
+		TypedQuery<KhachHang> query = em.createNamedQuery("KhachHang.findAll", KhachHang.class);
 		return query.getResultList();
 	}
-	public List<User> findByFullname(String fullname) {
+	public List<KhachHang> findByFullname(String fullname) {
 	    EntityManager em = JpaUtils.getEntityManager();
-	    String jpaQuery = "SELECT u FROM User u WHERE u.fullname LIKE :fullname";
-	    TypedQuery<User> query = em.createQuery(jpaQuery, User.class);
+	    String jpaQuery = "SELECT u FROM KhachHang u WHERE u.Fullname LIKE :fullname";
+	    TypedQuery<KhachHang> query = em.createQuery(jpaQuery, KhachHang.class);
 	    query.setParameter("fullname", "%" + fullname + "%");
 	    return query.getResultList();
 	}
 
 //// ghi chú
-	public List<User> findAll(int page, int pageSize) {
+	public List<KhachHang> findAll(int page, int pageSize) {
 	    EntityManager em = JpaUtils.getEntityManager();
-	    TypedQuery<User> query = em.createNamedQuery("User.findAll", User.class);
+	    TypedQuery<KhachHang> query = em.createNamedQuery("KhachHang.findAll", KhachHang.class);
 	    query.setFirstResult(page * pageSize);
 	    query.setMaxResults(pageSize);
 	    return query.getResultList();
@@ -162,7 +162,7 @@ public class UserDAO{
 
 	public long countAll() {
 	    EntityManager em = JpaUtils.getEntityManager();
-	    TypedQuery<Long> query = em.createQuery("SELECT COUNT(u) FROM User u", Long.class);
+	    TypedQuery<Long> query = em.createQuery("SELECT COUNT(u) FROM KhachHang u", Long.class);
 	    return query.getSingleResult();
 	}
 
@@ -171,7 +171,7 @@ public class UserDAO{
 
 	public int count() {
 		EntityManager em = JpaUtils.getEntityManager();
-		String japl = "select count( u) from User u ";
+		String japl = "select count( u) from KhachHang u ";
 		Query query = em.createQuery(japl);
 		return ((Long) query.getSingleResult()).intValue();
 	}

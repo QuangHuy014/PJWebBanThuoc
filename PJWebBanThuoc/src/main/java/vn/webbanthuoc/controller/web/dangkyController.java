@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.beanutils.BeanUtils;
 
 
-import test.User;
-import test.UserDAO;
+import test.KhachHang;
+import test.KhachHangDao;
 
 
 
@@ -33,7 +33,7 @@ public class dangkyController extends HttpServlet {
 			throws ServletException, IOException {
 		String action = request.getServletPath();
 		switch (action) {
-		case "/DangKy":
+		case "/DangKy": 
 			try {
 				DangKy(request, response);
 			} catch (IllegalAccessException | InvocationTargetException e) {
@@ -50,32 +50,26 @@ public class dangkyController extends HttpServlet {
 		}
 	}
    
-
-   
-//    private void DangKy(HttpServletRequest request, HttpServletResponse response)
-//			throws IllegalAccessException, InvocationTargetException, ServletException, IOException {
-//		UserDAO userDao = new UserDAO();
-//		if (request.getMethod().equalsIgnoreCase("POST")) {
-//			if (request.getParameter("buttonDangKy") != null) {
-//				User user = new User();
-//				BeanUtils.populate(user, request.getParameterMap());
-//				userDao.create(user);
-//				request.setAttribute("message", "Đăng ký thành công");
-//				response.setHeader("Refresh", "1;url=/PJWebBanThuoc/Dangky");
-//			} else {
-//				request.setAttribute("message", "Đăng ký thất bại");
-//			}
-//		}
-//		request.getRequestDispatcher("/views/web/trangdangky.jsp").forward(request, response);
-//	}
     private void DangKy(HttpServletRequest request, HttpServletResponse response)
             throws IllegalAccessException, InvocationTargetException, ServletException, IOException {
-        UserDAO userDao = new UserDAO();
+        KhachHangDao khDao = new KhachHangDao();
         if (request.getMethod().equalsIgnoreCase("POST")) {
             if (request.getParameter("buttonDangKy") != null) {
-                User user = new User();
+                KhachHang user = new KhachHang();
                 
                 // Kiểm tra và thiết lập giá trị từ form
+                int idkhachhang = 0; // Giá trị mặc định
+                String idkhachhangStr = request.getParameter("idkhachhang");
+                if (idkhachhangStr != null && !idkhachhangStr.isEmpty()) {
+                    try {
+                        idkhachhang = Integer.parseInt(idkhachhangStr);
+                    } catch (NumberFormatException e) {
+                        // Xử lý nếu không thể chuyển đổi thành công
+                        e.printStackTrace(); // In ra thông báo lỗi
+                        // Hoặc có thể gửi thông báo lỗi cho người dùng
+                    }
+                }
+                
                 String tendangnhap = request.getParameter("tendangnhap");
                 String matkhau = request.getParameter("matkhau");
                 String ten = request.getParameter("ten");
@@ -88,19 +82,18 @@ public class dangkyController extends HttpServlet {
                 user.setGioitinh(gioitinh);
                 
                 // Gọi hàm create để thêm User vào database
-                userDao.create(user);
+                khDao.create(user);
                 
-                request.setAttribute("message", "Đăng ký thành công");
-                response.setHeader("Refresh", "1;url=/PJWebBanThuoc/Dangky");
+                // Chuyển hướng sang trang đăng nhập
+                response.sendRedirect(request.getContextPath() + "/DangNhap");
+                
+                return; // Đảm bảo không tiếp tục thực thi sau khi chuyển hướng
             } else {
                 request.setAttribute("message", "Đăng ký thất bại");
             }
         }
         request.getRequestDispatcher("/views/web/trangdangky.jsp").forward(request, response);
     }
-
-
-
 
 
     private void DangNhap(HttpServletRequest request, HttpServletResponse response)

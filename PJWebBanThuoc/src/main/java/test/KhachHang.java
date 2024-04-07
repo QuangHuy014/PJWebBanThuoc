@@ -84,10 +84,10 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "KhachHang")
-//@NamedQuery(name = "User.findAll", query = "SELECT u FROM User u order by u.idkhachhang")
-public class User {
+//@NamedQuery(name = "User.findAll", query = "SELECT u FROM User u order by u.TenDangNhap")
+public class KhachHang {
     private static final long serialVersionUID = 1L;
-
+    
     @Id
     @Column(name = "TenDangNhap")
     private String tendangnhap;
@@ -101,52 +101,60 @@ public class User {
     @Column(name = "GioiTinh")
     private boolean gioitinh;
 
-    public User() {
+    public KhachHang() {
         super();
     }
 
-    public User(String tendangnhap, String matkhau, String ten, boolean gioitinh) {
-        super();
-        this.tendangnhap = tendangnhap;
-        this.matkhau = matkhau;
-        this.ten = ten;
-        this.gioitinh = gioitinh;
-    }
+	public KhachHang(String tendangnhap, String matkhau, String ten, boolean gioitinh) {
+		super();
+		this.tendangnhap = tendangnhap;
+		this.matkhau = matkhau;
+		this.ten = ten;
+		this.gioitinh = gioitinh;
+	}
 
-    public String getTendangnhap() {
-        return tendangnhap;
-    }
+	public String getTendangnhap() {
+		return tendangnhap;
+	}
 
-    public void setTendangnhap(String tendangnhap) {
-        this.tendangnhap = tendangnhap;
-    }
+	public void setTendangnhap(String tendangnhap) {
+		this.tendangnhap = tendangnhap;
+	}
 
-    public String getMatkhau() {
-        return matkhau;
-    }
+	public String getMatkhau() {
+		return matkhau;
+	}
 
-    public void setMatkhau(String matkhau) {
-        this.matkhau = matkhau;
-    }
+	public void setMatkhau(String matkhau) {
+		this.matkhau = matkhau;
+	}
 
-    public String getTen() {
-        return ten;
-    }
+	public String getTen() {
+		return ten;
+	}
 
-    public void setTen(String ten) {
-        this.ten = ten;
-    }
+	public void setTen(String ten) {
+		this.ten = ten;
+	}
 
-    public boolean isGioitinh() {
-        return gioitinh;
-    }
+	public boolean isGioitinh() {
+		return gioitinh;
+	}
 
-    public void setGioitinh(boolean gioitinh) {
-        this.gioitinh = gioitinh;
-    }
+	public void setGioitinh(boolean gioitinh) {
+		this.gioitinh = gioitinh;
+	}
 
-    public static long getSerialversionuid() {
-        return serialVersionUID;
-    }
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+    
+    
+
+	
+
+	
+
+   
 }
 

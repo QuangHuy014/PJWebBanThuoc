@@ -14,7 +14,7 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
 						<h3 class="mb-4 text-center">Create an Account</h3>
-						<form action="/PJWebBanThuoc/Login" class="signin-form"
+						<form action="/PJWebBanThuoc/DangKy" class="signin-form"
 							method="POST">
 							<div class="form-group">
 								<input type="text" class="form-control" name="tendangnhap"
@@ -54,7 +54,7 @@
 						<p class="w-100 text-center">&mdash; Or Sign Up With &mdash;</p>
 						<div class="social d-flex text-center">
 							<a href="#" class="px-2 py-2 mr-md-1 rounded"><span
-								class="ion-logo-facebook mr-2"></span> Facebook</a> <a href="#"
+								class="ion-logo-facebook mr-2"></span> Nhân Viên</a> <a href="#"
 								class="px-2 py-2 ml-md-1 rounded"><span
 								class="ion-logo-twitter mr-2"></span> Twitter</a>
 						</div>

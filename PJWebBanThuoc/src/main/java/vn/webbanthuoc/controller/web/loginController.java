@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.beanutils.BeanUtils;
 
 
-import test.User;
-import test.UserDAO;
+import test.KhachHang;
+import test.KhachHangDao;
 
 @WebServlet({"/Login", "/Home"})
 public class loginController extends HttpServlet {
@@ -56,15 +56,15 @@ public class loginController extends HttpServlet {
 
     private void Login(HttpServletRequest request, HttpServletResponse response)
             throws IllegalAccessException, InvocationTargetException, ServletException, IOException {
-        UserDAO userDao = new UserDAO();
+        KhachHangDao khDao = new KhachHangDao();
         if (request.getMethod().equalsIgnoreCase("POST")) {
             if (request.getParameter("buttonLogin") != null) {
                 String tenDN = request.getParameter("tendangnhap");
                 String pass = request.getParameter("matkhau");
-                User user = userDao.findById(tenDN);
-                if (user != null && user.getMatkhau().equals(pass)) {
+                KhachHang kh = khDao.findById(tenDN);
+                if (kh != null && kh.getMatkhau().equals(pass)) {
                     request.setAttribute("message", "Login succeed");
-                    request.getSession().setAttribute("user", user);
+                    request.getSession().setAttribute("KhachHang", kh);
                     // Nếu đăng nhập thành công, chuyển hướng đến trang Home
                     response.sendRedirect(request.getContextPath() + "/Home");
                     return; // Chấm dứt xử lý ở đây để không chuyển hướng đến trang login nữa
