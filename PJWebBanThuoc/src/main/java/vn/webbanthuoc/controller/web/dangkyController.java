@@ -57,19 +57,6 @@ public class dangkyController extends HttpServlet {
             if (request.getParameter("buttonDangKy") != null) {
                 KhachHang user = new KhachHang();
                 
-                // Kiểm tra và thiết lập giá trị từ form
-                int idkhachhang = 0; // Giá trị mặc định
-                String idkhachhangStr = request.getParameter("idkhachhang");
-                if (idkhachhangStr != null && !idkhachhangStr.isEmpty()) {
-                    try {
-                        idkhachhang = Integer.parseInt(idkhachhangStr);
-                    } catch (NumberFormatException e) {
-                        // Xử lý nếu không thể chuyển đổi thành công
-                        e.printStackTrace(); // In ra thông báo lỗi
-                        // Hoặc có thể gửi thông báo lỗi cho người dùng
-                    }
-                }
-                
                 String tendangnhap = request.getParameter("tendangnhap");
                 String matkhau = request.getParameter("matkhau");
                 String ten = request.getParameter("ten");
@@ -95,11 +82,10 @@ public class dangkyController extends HttpServlet {
         request.getRequestDispatcher("/views/web/trangdangky.jsp").forward(request, response);
     }
 
-
     private void DangNhap(HttpServletRequest request, HttpServletResponse response)
-			throws IllegalAccessException, InvocationTargetException, ServletException, IOException {
-    	request.getRequestDispatcher("/views/web/tranglogin.jsp").forward(request, response);
-	}
+            throws IllegalAccessException, InvocationTargetException, ServletException, IOException {
+        request.getRequestDispatcher("/views/web/tranglogin.jsp").forward(request, response);
+    }
 }
     
 

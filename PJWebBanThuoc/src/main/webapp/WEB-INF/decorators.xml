@@ -20,7 +20,7 @@
     <decorator name="home" page="trangchu.jsp">
         <pattern>/Home</pattern>
     </decorator>
-<decorator name="dangnhap" page="tranglogin.jsp">
+    <decorator name="dangnhap" page="tranglogin.jsp">
         <pattern>/DangNhap</pattern>
     </decorator>
     
@@ -61,6 +61,19 @@
     <decorator name="dangki" page="trangdangky.jsp">
         <pattern>/DangKy</pattern>
     </decorator>
+    <decorator name="dangkiPQ" page="dangkyChinh.jsp">
+        <pattern>/dangkyPQ</pattern>
+    </decorator>
+    <decorator name="dangnhapPQ" page="tranglogin.jsp">
+        <pattern>/DangNhapPQ</pattern>
+    </decorator>
+    <decorator name="doimatkhau" page="doimatkhau.jsp">
+        <pattern>/doiMatKhau</pattern>
+    </decorator>
+    <decorator name="trangdangnhap" page="tranglogin.jsp">
+        <pattern>/DangNhapchinh</pattern>
+    </decorator>
+    
 
 
 </decorators>

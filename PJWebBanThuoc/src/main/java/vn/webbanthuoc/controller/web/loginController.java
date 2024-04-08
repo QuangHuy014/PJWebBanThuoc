@@ -18,6 +18,8 @@ import org.apache.commons.beanutils.BeanUtils;
 
 import test.KhachHang;
 import test.KhachHangDao;
+import test.NhanVien;
+import test.NhanVienDao;
 
 @WebServlet({"/Login", "/Home"})
 public class loginController extends HttpServlet {
@@ -57,14 +59,24 @@ public class loginController extends HttpServlet {
     private void Login(HttpServletRequest request, HttpServletResponse response)
             throws IllegalAccessException, InvocationTargetException, ServletException, IOException {
         KhachHangDao khDao = new KhachHangDao();
+        NhanVienDao nvDao = new NhanVienDao();
         if (request.getMethod().equalsIgnoreCase("POST")) {
             if (request.getParameter("buttonLogin") != null) {
                 String tenDN = request.getParameter("tendangnhap");
                 String pass = request.getParameter("matkhau");
+                
                 KhachHang kh = khDao.findById(tenDN);
+                NhanVien nv = nvDao.findById(tenDN);
+
                 if (kh != null && kh.getMatkhau().equals(pass)) {
-                    request.setAttribute("message", "Login succeed");
+                    request.setAttribute("message", "Login succeed as KhachHang");
                     request.getSession().setAttribute("KhachHang", kh);
+                    // Nếu đăng nhập thành công, chuyển hướng đến trang Home
+                    response.sendRedirect(request.getContextPath() + "/Home");
+                    return; // Chấm dứt xử lý ở đây để không chuyển hướng đến trang login nữa
+                } else if (nv != null && nv.getMatkhau().equals(pass)) {
+                    request.setAttribute("message", "Login succeed as NhanVien");
+                    request.getSession().setAttribute("NhanVien", nv);
                     // Nếu đăng nhập thành công, chuyển hướng đến trang Home
                     response.sendRedirect(request.getContextPath() + "/Home");
                     return; // Chấm dứt xử lý ở đây để không chuyển hướng đến trang login nữa
