@@ -73,6 +73,9 @@
     <decorator name="trangdangnhap" page="tranglogin.jsp">
         <pattern>/DangNhapchinh</pattern>
     </decorator>
+    <decorator name = "quenmk" page="quenmk.jsp">
+       <pattern>/quenMK</pattern>
+    </decorator>
     
 
 
